@@ -1,0 +1,10 @@
+
+.my-image-list {
+    @include image-list.standard-columns(5);
+  
+    max-width: 960px;
+  }
+  .my-card {
+    height: 350px;
+    width: 350px;
+  }
