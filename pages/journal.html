@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="text/css" href="main.css">
+  <title>Cathy Fit</title>
+
+  <style media="screen">
+    body {
+      /* The image used */
+      background-image: url('https://i.pinimg.com/originals/18/52/19/18521955cc2c891f68f9cc50bee0454f.jpg');
+
+      /* Full height */
+      height: 100vh;
+
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .container{
+    margin-right: auto;
+    margin-left: auto;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!--Navbar-->
+  <div class="mdc-tab-bar" role="tablist">
+    <div class="mdc-tab-scroller">
+      <div class="mdc-tab-scroller__scroll-area">
+        <div class="mdc-tab-scroller__scroll-content">
+          <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
+            <span class="mdc-tab__content">
+              <span class="mdc-tab__text-label">Home</span>
+            </span>
+            <span class="mdc-tab-indicator mdc-tab-indicator--active">
+              <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+            </span>
+            <span class="mdc-tab__ripple"></span>
+          </button>
+        </div>
+        <div class="mdc-tab-scroller__scroll-content">
+          <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
+            <span class="mdc-tab__content">
+              <span class="mdc-tab__icon material-icons" aria-hidden="true"></span>
+              <span class="mdc-tab__text-label">Workouts & Programs</span>
+            </span>
+            <span class="mdc-tab-indicator mdc-tab-indicator--active">
+              <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+            </span>
+            <span class="mdc-tab__ripple"></span>
+          </button>
+        </div>
+        <div class="mdc-tab-scroller__scroll-content">
+          <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
+            <span class="mdc-tab__content">
+              <span class="mdc-tab__text-label">Diets</span>
+            </span>
+            <span class="mdc-tab-indicator mdc-tab-indicator--active">
+              <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+            </span>
+            <span class="mdc-tab__ripple"></span>
+          </button>
+        </div>
+        <div class="mdc-tab-scroller__scroll-content">
+          <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
+            <span class="mdc-tab__content">
+              <span class="mdc-tab__text-label">Sign in/Sign Up</span>
+            </span>
+            <span class="mdc-tab-indicator mdc-tab-indicator--active">
+              <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+            </span>
+            <span class="mdc-tab__ripple"></span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+ <hr>
+  <!--Journal-->
+  <div class="col-md-6">
+  <div class="container">
+      <div class="row mdc-card">
+          <div>
+            <button class="mdc-icon-button material-icons mdc-card__action mdc-card__action--icon--unbounded" title="More options" data-mdc-ripple-is-unbounded="true">calendar_today</button>
+            <h2 class="mdc-typography mdc-typography--headline2 text-center">Wednesday,March 4</h2>
+          </div>
+        <h2 class="mdc-typography mdc-typography--headline2 text-center">I am grateful for..</h2>
+        <ul>
+            <li>1.</li>
+            <hr>
+            <li>2.</li>
+            <hr>
+            <li>3.</li>
+            <hr>
+        </ul>
+        <h2 class="mdc-typography mdc-typography--headline2 text-center">What will I do to make today great?</h2>
+        <ul>
+            <li>1.</li>
+            <hr>
+            <li>2.</li>
+            <hr>
+            <li>3.</li>
+            <hr>
+        </ul>
+      </div>
+  </div>
+  </div>
+ <hr>
+<!--Stats for the day-->
+<div class="col-md-8">
+    <div class="container">
+        <div class="row mdc-card">
+                <ul class="mdc-list">
+                        <li class="mdc-list-item" tabindex="0">
+                          <span class="mdc-list-item__text">Todays Weight</span><form>
+                                <input type="text" id="fname" name="fname">
+                        </li>
+                        <li class="mdc-list-item">
+                          <span class="mdc-list-item__text">Todays Total Calories</span>
+                          <form>
+                                <input type="text" id="fname" name="fname">
+                        </li>
+                        <li role="separator" class="mdc-list-divider"></li>
+                        <li class="mdc-list-item">
+                          <span class="mdc-list-item__text">Goal Weight 120Lbs</span>
+                        </li>
+    
+                      </ul>  
+        </div>
+    </div>
+</div>
+      </div>
+  <hr>
+  <!-- Scripts -->
+  <script src="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+</body>
+
+</html>
