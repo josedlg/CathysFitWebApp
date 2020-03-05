@@ -1,8 +1,22 @@
 /*Used to center text in center of image SB*/
-.centeredxx {
+.centered {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-weight: bold;
+}
+
+/*Used for Landing page of main.html*/
+.bg {
+  /* The image used */
+  background-image: url('http://getwallpapers.com/wallpaper/full/3/8/4/1183962-healthy-food-wallpaper-1920x1080-for-android.jpg');
+
+  /* Full height */
+  height: 72vh;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
