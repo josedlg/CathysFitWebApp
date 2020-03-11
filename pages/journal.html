@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="../style/main.css">
-  <title>Workouts</title>
+  <title>Journal</title>
 </head>
 
 <body>
@@ -16,7 +16,7 @@
     <!--Journal UI Stats BEGIN-->
     <div class="container-fluid my-4">
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-12 col-md-6 mdc-elevation--z2">
           <div class="row">
             <div class="container-fluid">
               <h1 class="mdc-typography--headline4 text-center">Mantras of the Day</h1>
@@ -55,6 +55,7 @@
                   </span>
                   <label class="mdc-list-item__text" for="demo-list-checkbox-item-1">Jumping Jack: 5min</label>
                 </li>
+
                 <li class="mdc-list-item" role="checkbox" aria-checked="false" tabindex="0">
                   <span class="mdc-list-item__graphic">
                     <div class="mdc-checkbox">
@@ -69,6 +70,7 @@
                   </span>
                   <label class="mdc-list-item__text" for="demo-list-checkbox-item-2">Burpee: 5min</label>
                 </li>
+
                 <li class="mdc-list-item" role="checkbox" aria-checked="false">
                   <span class="mdc-list-item__graphic">
                     <div class="mdc-checkbox">
@@ -89,63 +91,145 @@
           </div>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-12 col-md-6 mdc-elevation--z2">
           <div class="row">
             <div class="container-fluid">
               <h1 class="mdc-typography--headline4 text-center">Journal</h1>
               <ul class="mdc-list">
-                <li class="mdc-list-item" tabindex="0">
-                  <div class="col-3">
-                    <span class="mdc-typography--body2">Icom</span>
+                <!--Journal Entry Begin-->
+                <li class="mdc-list-item border my-1" tabindex="0">
+                  <!--Icon and dat-->
+                  <div class="col-md-2">
+                    <button id="add-to-favorites" class="mdc-icon-button" aria-label="Add to favorites" aria-pressed="false">
+                      <i class="material-icons mdc-icon-button__icon mdc-icon-button__icon--on">favorite</i>
+                      <i class="material-icons mdc-icon-button__icon">favorite_border</i>
+                    </button>
                   </div>
-
-                  <div class="col-9">
-                    <span class="mdc-list-item__primary-text">Title</span>
-                    <span class="mdc-list-item__secondary-text">Date</span>
+                  <!--Title-->
+                  <div class="col-md-8">
+                    <p class="mdc-typography--body4 text-truncate">Title</p>
                   </div>
-                </li>
-
-                <li class="mdc-list-item" tabindex="0">
-                  <div class="col-3">
-                    <span class="mdc-typography--body2">Icom</span>
-                  </div>
-
-                  <div class="col-9">
-                    <span class="mdc-list-item__primary-text">Title</span>
-                    <span class="mdc-list-item__secondary-text">Date</span>
+                  <!--Date-->
+                  <div class="col-md-2">
+                    <p>3/10/20</p>
                   </div>
                 </li>
 
-                <li class="mdc-list-item" tabindex="0">
-                  <div class="col-3">
-                    <span class="mdc-typography--body2">Icom</span>
+                <li class="mdc-list-item border my-1">
+                  <!--Icon and dat-->
+                  <div class="col-md-2">
+                    <button id="add-to-favorites" class="mdc-icon-button" aria-label="Add to favorites" aria-pressed="false">
+                      <i class="material-icons mdc-icon-button__icon mdc-icon-button__icon--on">favorite</i>
+                      <i class="material-icons mdc-icon-button__icon">favorite_border</i>
+                    </button>
                   </div>
+                  <!--Title-->
+                  <div class="col-md-8">
+                    <p class="mdc-typography--body4 text-truncate">Title</p>
+                  </div>
+                  <!--Date-->
+                  <div class="col-md-2">
+                    <p>3/10/20</p>
+                  </div>
+                </li>
 
-                  <div class="col-9">
-                    <span class="mdc-list-item__primary-text">Title</span>
-                    <span class="mdc-list-item__secondary-text">Date</span>
+                <li class="mdc-list-item border my-1">
+                  <!--Icon and dat-->
+                  <div class="col-md-2">
+                    <button id="add-to-favorites" class="mdc-icon-button" aria-label="Add to favorites" aria-pressed="false">
+                      <i class="material-icons mdc-icon-button__icon mdc-icon-button__icon--on">favorite</i>
+                      <i class="material-icons mdc-icon-button__icon">favorite_border</i>
+                    </button>
+                  </div>
+                  <!--Title-->
+                  <div class="col-md-8">
+                    <p class="mdc-typography--body4 text-truncate">Title</p>
+                  </div>
+                  <!--Date-->
+                  <div class="col-md-2">
+                    <p>3/10/20</p>
                   </div>
                 </li>
-                <li class="mdc-list-item">
-                  <span class="mdc-list-item__text">Single-line item</span>
-                </li>
+                <!--Journal Entry END-->
               </ul>
             </div>
           </div>
         </div>
-
-        <div class="col-md-3">
-          <h1 class="mdc-typography--headline4 text-center">Search</h1>
-        </div>
       </div>
+      <!--Journal UI Stats END-->
+
+      <!-- Search Section BEGIN-->
+      <div class="row  border ">
+        <h1 class="mdc-typography--headline4 text-center">Search</h1>
+        <input class="form-control" id="myInput" type="text" placeholder="Search..">
+      </div>
+      <!-- Search Section END-->
+
+      <!-- Journal Entry BEGIN-->
+      <div class="container-fluid my-4 bg-light">
+        <h1 class="mdc-typography--headline4 text-center ">Journal Entry</h1>
+        <!-- Goals BEGIN-->
+        <form class="form card p-1 mdc-elevation--z1  my-3 " action="">
+          <h1 class="mdc-typography--headline5 text-center">New Goal</h1>
+          <div class="form-group">
+            <label class="mdc-typography--headline6" for="titleGoal">Title</label>
+            <input type="text" class="form-control" id="titleGoal" min="0" maxlength="5" required>
+          </div>
+
+          <div class="form-group">
+            <label class="mdc-typography--headline6" for="optradio">Type</label>
+            <label class="radio-inline mx-1"><input type="radio" name="optradio" checked>Yes/No</label>
+            <label class="radio-inline mx-1"><input type="radio" name="optradio">Numeric</label>
+          </div>
+
+          <div class="form-group">
+            <label class="mdc-typography--headline6" for="notes">Description</label>
+            <textarea class="form-control" rows="5" id="description" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="mdc-typography--headline6" for="counterGoal">Number to Goal</label>
+            <input type="number" class="form-control" id="counterGoal" min="0" maxlength="5" required>
+          </div>
+
+          <div class="col-auto">
+            <button type="submit" class="btn btn-primary mb-2">Add Goal</button>
+          </div>
+        </form>
+        <!-- Goals BEGIN-->
+
+        <!-- Calorie Counter BEGIN-->
+        <form class="form card p-2 mdc-elevation--z1  my-3" action="">
+          <div class="form-group">
+            <label class="mdc-typography--headline6" for="calorie">Calorie Counter</label>
+            <input type="number" class="form-control" id="calorie" min="0" maxlength="5" required>
+          </div>
+          <div class="col-auto">
+            <button type="submit" class="btn btn-primary mb-2">Add Calorie</button>
+          </div>
+        </form>
+        <!-- Calorie Counter END-->
+
+        <!-- Notes BEGIN-->
+        <form class="form card p-2 mdc-elevation--z1 my-3" action="">
+          <div class="form-group">
+            <label class="mdc-typography--headline6" for="notes">Notes</label>
+            <textarea class="form-control" rows="5" id="notes" required></textarea>
+          </div>
+          <div class="col-auto">
+            <button type="submit" class="btn btn-primary mb-2">Add Note</button>
+          </div>
+        </form>
+        <!-- Notes END-->
+      </div>
+      <!-- Journal Entry END-->
+
     </div>
-    <!--Journal UI Stats END-->
-  </div>
-  <!-- Scripts -->
-  <script src="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- Scripts -->
+    <script src="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 </body>
 
 </html>
