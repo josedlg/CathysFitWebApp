@@ -1,0 +1,101 @@
+# How to do models in Django Link
+# https://docs.djangoproject.com/en/3.0/topics/db/models/#many-to-many-relationships
+
+user
+------------
+UserID PK IntegerField
+UserName UNIQUE CharField 
+Email UNIQUE CharField
+FirstName CharField
+LastName CharField
+ProfileImage NULL ImageField
+Weight NULL IntegerField
+Gender Null CharField
+Age Null IntegerField
+Date DateField 
+
+Recipe
+------------
+RecipeID PK IntegerField
+Name CharField
+RecipeCategory CharField
+Type CharField
+CoverImage ImageField
+Description TextField
+PrepTime IntegerField
+CookTime IntegerField
+Ingredients TextField   #Needs Change
+Preparation TextField
+Notes TextField
+Date DateField 
+
+Workouts
+------------
+WorkoutsID PK IntegerField
+Name CharField
+WorkoutCategory CharField
+Type CharField
+CoverImage ImageField
+Description TextField
+CaloriesBurn IntegerField
+Duration IntegerField
+Steps TextField         #Needs Change
+VideoURL URLField
+Date DateField 
+
+Mantras
+------------
+MantraID PK IntegerField
+Description TextField
+Date DateField 
+
+#One to Many RelationShip Table
+Goals
+------------
+GoalID PK IntegerField 
+UserID ForeignKey FK >- user.UserID
+Name CharField
+Type CharField
+Description TextField
+NumberToGoal IntegerField #Better name needed
+Complete BooleanField
+Date DateField 
+
+#One to Many RelationShip Table
+Journal
+------------
+JournalID PK IntegerField 
+UserID ForeignKey FK >- user.UserID
+Name CharField
+Type CharField
+Description TextField
+Favorite BooleanField
+Date DateField 
+
+#One to Many RelationShip Table
+Meals
+------------
+MealID PK IntegerField 
+UserID ForeignKey FK >- user.UserID
+Name CharField
+Type CharField
+Calories IntegerField
+Date DateField 
+
+#Many to Many Relationship Table
+FavortieRecipe
+------------
+UserID ManyToManyField FK >- user.UserID
+RecipeID ManyToManyField FK >- Recipe.RecipeID
+
+#Many to Many Relationship Table
+FavoriteWorkout
+------------
+UserID ManyToManyField FK >- user.UserID
+WorkoutID ManyToManyField FK >- Workouts.WorkoutsID
+
+#Many to Many Relationship Table
+FavoriteMantra
+------------
+UserID ManyToManyField FK >- user.UserID
+MantraID ManyToManyField FK >- Mantras.MantraID
